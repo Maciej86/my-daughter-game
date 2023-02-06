@@ -1,0 +1,103 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background: url("images/background.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+@media (max-width: 800px) {
+  body {
+    height: auto;
+  }
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: rgba(205, 174, 206, 0.6);
+  backdrop-filter: blur(2px);
+}
+
+container {
+  width: 100%;
+  max-width: 800px;
+  padding: 30px;
+}
+
+.contener__title {
+  text-align: center;
+  font-size: 50px;
+}
+
+.container__button,
+.container__images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.container__button {
+  margin-top: 20px;
+}
+
+.buttonNumber {
+  position: relative;
+  padding: 17px 32px;
+  cursor: pointer;
+  background: rgb(180, 117, 135);
+  border: 6px solid rgb(124, 80, 93);
+  border-radius: 63% 43% / 50% 48%;
+  font-size: 37px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  transition: background 0.5s, border-color 0.5s;
+}
+
+.buttonNumber:hover {
+  background: rgb(148, 96, 111);
+  border-color: rgb(85, 55, 64);
+}
+
+.buttonNumberOK,
+.buttonNumberOK:hover {
+  background: rgb(46, 204, 113);
+  border-color: rgb(33, 145, 79);
+}
+
+.buttonNumberError,
+.buttonNumberError:hover {
+  background: rgb(231, 76, 60);
+  border-color: rgb(143, 43, 32);
+}
+
+.buttonNumberError::after {
+  content: "x";
+  position: absolute;
+  display: inline-block;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.picture {
+  width: 120px;
+}
