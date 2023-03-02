@@ -32,8 +32,6 @@ body {
   backdrop-filter: blur(2px);
 }
 
-.test {}
-
 .container {
   width: 100%;
   max-width: 800px;
